@@ -47,9 +47,7 @@ def solve_task():
     pipes_map = get_map()
     length = 0
     x, y = find_start(pipes_map)
-    if x == -1:
-        print("Error1")
-    direction = "s"
+    direction = "s"  # Hardcode for my puzzle
     while direction is not None:
         x, y, direction = move(pipes_map, x, y, direction)
         # print(x, y, direction)

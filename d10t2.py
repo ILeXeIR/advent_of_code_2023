@@ -37,8 +37,7 @@ def capture(pipes_map, new_map, x, y, direction):
         "J": {"n": "", "w": "se"},
         "7": {"w": "", "s": "en"},
         "F": {"s": "", "e": "nw"}
-    }
-    # print(pipes_map[y][x], x, y, direction)
+    }  # hardcode for my puzzle (checked right side of line, can be left in other cases)
     to_capture = capture_dict[pipes_map[y][x]][direction]
     for target in to_capture:
         if target == "n":
@@ -112,10 +111,6 @@ def solve_task():
     while flag == 1:
         flag = check_neighbours(new_map)
     print(count_res(new_map))
-    # with open("files/D10_out.txt", "w") as file:
-    #     for line in new_map:
-    #         string = "".join(line) + "\n"
-    #         file.write(string)
 
 
 solve_task()
