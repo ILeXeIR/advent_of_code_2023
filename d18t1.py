@@ -80,10 +80,10 @@ def solve_task():
     tunnel_map = get_map(instructions, limits)
     res = count_square(tunnel_map)
     print(res)
-    # for y in range(len(tunnel_map)):
-    #     for x in range(len(tunnel_map[0])):
-    #         print(tunnel_map[y][x][0], end=" ")
-    #     print()
+    for y in range(len(tunnel_map)):
+        for x in range(len(tunnel_map[0])):
+            print(tunnel_map[y][x][0], end=" ")
+        print()
 
 
 solve_task()
